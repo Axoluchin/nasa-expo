@@ -1,8 +1,8 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import { View, ViewProps } from "react-native";
 
 interface RowProps extends ViewProps {
-  children: ReactElement[];
+  children: ReactNode;
 }
 
 export default function Row({ children, style, ...props }: RowProps) {
@@ -12,6 +12,7 @@ export default function Row({ children, style, ...props }: RowProps) {
         {
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems: "center",
         },
         style,
       ]}
